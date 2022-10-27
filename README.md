@@ -1,20 +1,6 @@
 # kalokohan
 
-A template project with:
-
-- Python 3.10
-- Django 3.2 LTS
-
-## Features
-
-- Development inside Docker
-- Django settings such as `SECRET_KEY` and `ALLOWED_HOSTS` are configured with environment variables out of the box
-- Can be easily deployed to [Heroku][heroku] or [Dokku][dokku]
-- Static files are served with [Whitenoise][whitenoise]
-- Errors can be sent to [Sentry][sentry] or [GlitchTip][glitchtip]
-
-[heroku]: https://heroku.com
-[dokku]: https://dokku.com/
-[whitenoise]: http://whitenoise.evans.io/en/stable/
-[sentry]: https://sentry.io/
-[glitchtip]: https://glitchtip.com/
+- django app na pangkalokohan lang
+- a playground for testing, kuno
+- wanted a space to build internal systems and apis that i don't want to build their own projects for yet
+- also want to see what i'd need to port back to [django3-template](https://github.com/b-ggs/django3-template)
