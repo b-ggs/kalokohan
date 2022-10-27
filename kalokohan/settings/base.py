@@ -18,8 +18,12 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 INSTALLED_APPS = [
     # Project apps
+    "kalokohan.configs",
     "kalokohan.home",
+    "kalokohan.logs",
     "kalokohan.utils",
+    # Third-party apps
+    "solo",
     # Django core apps
     "django_extensions",
     "django.contrib.admin",
