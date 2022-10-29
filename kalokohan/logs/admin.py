@@ -7,12 +7,12 @@ from kalokohan.logs.models import LogItem
 class LogItemAdmin(admin.ModelAdmin):
     list_display = [
         "uuid",
-        "type",
-        "source",
+        "log_type",
+        "log_source",
         "message",
         "created",
     ]
-    filter_vertial = [
-        "type",
-        "source",
+    list_filter = [
+        "log_type",
+        "log_source",
     ]

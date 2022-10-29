@@ -5,20 +5,20 @@ from django.db import models
 from django_extensions.db.models import TimeStampedModel
 
 
-class LogItemType(models.TextChoices):
+class LogType(models.TextChoices):
     WALLPAPER = "WALLPAPER", "wallpaper"
 
 
-LogItemTypeType = Literal[
+LogTypeType = Literal[
     "WALLPAPER",
 ]
 
 
-class LogItemSource(models.TextChoices):
+class LogSource(models.TextChoices):
     APPLE_SHORTCUTS = "APPLE_SHORTCUTS", "apple shortcuts"
 
 
-LogItemSourceType = Literal[
+LogSourceType = Literal[
     "APPLE_SHORTCUTS",
 ]
 
@@ -28,12 +28,12 @@ class LogItem(TimeStampedModel):
         primary_key=True,
         default=uuid.uuid4,
     )
-    type = models.CharField(
+    log_type = models.CharField(
         max_length=32,
-        choices=LogItemType.choices,
+        choices=LogType.choices,
     )
-    source = models.CharField(
+    log_source = models.CharField(
         max_length=32,
-        choices=LogItemSource.choices,
+        choices=LogSource.choices,
     )
     message = models.TextField(blank=True)
