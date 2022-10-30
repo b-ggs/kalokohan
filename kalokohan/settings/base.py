@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "kalokohan.home",
     "kalokohan.logs",
     "kalokohan.utils",
+    "kalokohan.wallpapers",
     # Third-party apps
     "solo",
     # Django core apps
@@ -177,3 +178,11 @@ if sentry_dsn := os.getenv("SENTRY_DSN"):
 
 for cls in [ForeignKey]:
     cls.__class_getitem__ = classmethod(lambda cls, *args, **kwargs: cls)  # type: ignore [attr-defined]
+
+
+# wallpapers settings
+
+WALLPAPERS_UNSPLASH_CLIENT_CLASS = "kalokohan.wallpapers.clients.UnsplashClient"
+WALLPAPERS_LITTERBOX_CLIENT = "kalokohan.wallpapers.clients.LitterboxClient"
+
+WALLPAPERS_UNSPLASH_ACCESS_ID = os.getenv("WALLPAPERS_UNSPLASH_ACCESS_ID", "")

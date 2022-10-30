@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class WallpapersConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "kalokohan.wallpapers"
+    label = "wallpapers"

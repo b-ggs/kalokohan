@@ -8,7 +8,7 @@ from kalokohan.logs.models import LogItem, LogSource, LogType
 fake = Faker()
 
 
-class TestLog(TestCase):
+class LogTest(TestCase):
     def setUp(self) -> None:
         self.url = reverse("api-1.0.0:log")
 

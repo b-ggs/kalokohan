@@ -10,3 +10,10 @@ SECRET_KEY = "django-insecure-nvg5arlsvczsdk5pzu-=f2qpst%ze8#jyuhfmldp7--j#ao5)j
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ["*"]
+
+# wallpapers settings
+
+WALLPAPERS_UNSPLASH_CLIENT_CLASS = "kalokohan.wallpapers.clients.DummyUnsplashClient"
+WALLPAPERS_LITTERBOX_CLIENT = "kalokohan.wallpapers.clients.DummyLitterboxClient"
+
+WALLPAPERS_UNSPLASH_ACCESS_ID = "unsplash_client_id"
