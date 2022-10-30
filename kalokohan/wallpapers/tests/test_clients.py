@@ -24,8 +24,6 @@ class UnsplashClientTest(TestCase):
 
         fake_response = json.loads(raw)
 
-        breakpoint()
-
         responses.add(
             responses.GET,
             f"{self.base_url}/photos/random",
