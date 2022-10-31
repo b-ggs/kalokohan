@@ -1,6 +1,6 @@
 import platform
 
-from django import get_version
+from django.utils.version import get_complete_version
 from django.views.generic import TemplateView
 
 
@@ -11,6 +11,6 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context |= {
             "python_version": ".".join(platform.python_version_tuple()),
-            "django_version": get_version(),
+            "django_version": ".".join(str(item) for item in get_complete_version()),
         }
         return context

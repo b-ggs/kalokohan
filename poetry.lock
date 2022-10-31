@@ -130,21 +130,28 @@ python-versions = "*"
 Django = ">3.2"
 
 [[package]]
-name = "django"
-version = "4.1.2"
+name = "Django"
+version = "4.2.dev20221031113113"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
 python-versions = ">=3.8"
+develop = false
 
 [package.dependencies]
-asgiref = ">=3.5.2,<4"
+asgiref = ">=3.5.2"
 sqlparse = ">=0.2.2"
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+
+[package.source]
+type = "git"
+url = "https://github.com/django/django.git"
+reference = "HEAD"
+resolved_reference = "2bc47d7fe95ec9fc62bc5c0d2408944e5269d9d0"
 
 [[package]]
 name = "django-extensions"
@@ -636,7 +643,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "620a816bcd18b8393813307662d94304106522ead07ac5548459ba99d506377c"
+content-hash = "8c50a1843dfbbbd75d796bb726d0486af7d9a52888e584b24d9cb5303cb6a080"
 
 [metadata.files]
 asgiref = [
@@ -702,10 +709,7 @@ dj-database-url = [
     {file = "dj-database-url-1.0.0.tar.gz", hash = "sha256:ccf3e8718f75ddd147a1e212fca88eecdaa721759ee48e38b485481c77bca3dc"},
     {file = "dj_database_url-1.0.0-py3-none-any.whl", hash = "sha256:cd354a3b7a9136d78d64c17b2aec369e2ae5616fbca6bfbe435ef15bb372ce39"},
 ]
-django = [
-    {file = "Django-4.1.2-py3-none-any.whl", hash = "sha256:26dc24f99c8956374a054bcbf58aab8dc0cad2e6ac82b0fe036b752c00eee793"},
-    {file = "Django-4.1.2.tar.gz", hash = "sha256:b8d843714810ab88d59344507d4447be8b2cf12a49031363b6eed9f1b9b2280f"},
-]
+Django = []
 django-extensions = [
     {file = "django-extensions-3.2.1.tar.gz", hash = "sha256:2a4f4d757be2563cd1ff7cfdf2e57468f5f931cc88b23cf82ca75717aae504a4"},
     {file = "django_extensions-3.2.1-py3-none-any.whl", hash = "sha256:421464be390289513f86cb5e18eb43e5dc1de8b4c27ba9faa3b91261b0d67e09"},
