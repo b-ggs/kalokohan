@@ -44,10 +44,8 @@ class DummyUnsplashClient(BaseUnsplashClient):
 
 
 class UnsplashClient(BaseUnsplashClient):
-    def __init__(self, base_url: str = "") -> None:
+    def __init__(self, base_url: str = "https://api.unsplash.com") -> None:
         super().__init__(base_url)
-        if not self.base_url:
-            self.base_url = "https://api.unsplash.com"
 
     def get_random_photo(
         self,
@@ -131,10 +129,11 @@ class DummyLitterboxClient(BaseLitterboxClient):
 
 
 class LitterboxClient(BaseLitterboxClient):
-    def __init__(self, base_url: str = "") -> None:
+    def __init__(
+        self,
+        base_url: str = "https://litterbox.catbox.moe/resources/internals/api.php",
+    ) -> None:
         super().__init__(base_url)
-        if not self.base_url:
-            self.base_url = "https://litterbox.catbox.moe/resources/internals/api.php"
 
     def upload_image(self, image_binary: bytes) -> str:
         """
