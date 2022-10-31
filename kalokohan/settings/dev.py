@@ -12,7 +12,7 @@ SECRET_KEY = "django-insecure-nvg5arlsvczsdk5pzu-=f2qpst%ze8#jyuhfmldp7--j#ao5)j
 ALLOWED_HOSTS = ["*"]
 
 # SECURITY WARNING: define the correct origins in production!
-CSRF_TRUSTED_ORIGINS = ["*"]
+CSRF_TRUSTED_ORIGINS = []
 
 # wallpapers settings
 
