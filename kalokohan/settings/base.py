@@ -11,9 +11,15 @@ DJANGO_ENV = os.getenv("DJANGO_ENV", "production")
 
 SECRET_KEY = os.getenv("SECRET_KEY", "")
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+if allowed_hosts := os.getenv("ALLOWED_HOSTS"):
+    ALLOWED_HOSTS = allowed_hosts.split(",")
+else:
+    ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+if csrf_trusted_origins := os.getenv("CSRF_TRUSTED_ORIGINS"):
+    CSRF_TRUSTED_ORIGINS = csrf_trusted_origins.split(",")
+else:
+    CSRF_TRUSTED_ORIGINS = []
 
 
 # Application definition

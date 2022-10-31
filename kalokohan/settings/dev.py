@@ -11,9 +11,6 @@ SECRET_KEY = "django-insecure-nvg5arlsvczsdk5pzu-=f2qpst%ze8#jyuhfmldp7--j#ao5)j
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ["*"]
 
-# SECURITY WARNING: define the correct origins in production!
-CSRF_TRUSTED_ORIGINS = []
-
 # wallpapers settings
 
 WALLPAPERS_UNSPLASH_CLIENT_CLASS = "kalokohan.wallpapers.clients.DummyUnsplashClient"
