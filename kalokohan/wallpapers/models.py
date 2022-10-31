@@ -1,6 +1,7 @@
 from typing import cast
 
 from django.db import models
+from django_extensions.db.models import TimeStampedModel
 from solo.models import SingletonModel
 
 
@@ -19,3 +20,8 @@ class Config(SingletonModel):
 
     class Meta:
         verbose_name = "config"
+
+
+class PastRandomPhoto(TimeStampedModel):
+    image_url = models.CharField(max_length=255)
+    item_url = models.CharField(max_length=255)
