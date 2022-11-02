@@ -9,7 +9,7 @@ admin.site.register(Config, SingletonModelAdmin)
 @admin.register(PastRandomPhoto)
 class PastRandomPhotoAdmin(admin.ModelAdmin):
     list_display = [
-        "image_url",
+        "id",
         "item_url",
         "created",
     ]
