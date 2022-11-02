@@ -191,7 +191,13 @@ for cls in [ForeignKey]:
 
 # wallpapers settings
 
-WALLPAPERS_UNSPLASH_CLIENT_CLASS = "kalokohan.wallpapers.clients.UnsplashClient"
-WALLPAPERS_LITTERBOX_CLIENT = "kalokohan.wallpapers.clients.LitterboxClient"
-
+WALLPAPERS_API_KEY = os.getenv("WALLPAPERS_API_KEY", "")
+WALLPAPERS_UNSPLASH_CLIENT_CLASS = os.getenv(
+    "WALLPAPERS_UNSPLASH_CLIENT_CLASS",
+    "kalokohan.wallpapers.clients.UnsplashClient",
+)
+WALLPAPERS_LITTERBOX_CLIENT = os.getenv(
+    "WALLPAPERS_LITTERBOX_CLIENT",
+    "kalokohan.wallpapers.clients.LitterboxClient",
+)
 WALLPAPERS_UNSPLASH_ACCESS_ID = os.getenv("WALLPAPERS_UNSPLASH_ACCESS_ID", "")
