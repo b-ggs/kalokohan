@@ -33,6 +33,11 @@ jobs:
         with:
           python-version: "3.11"
           cache: poetry
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: npm
       - name: Install dependencies with Poetry
         run: poetry install
       - name: Run black
@@ -49,6 +54,12 @@ jobs:
         if: always()
       - name: Run detect-secrets
         run: poetry run detect-secrets scan --baseline .secrets.baseline
+        if: always()
+      - name: Run pyright
+        run: poetry run npx pyright .
+        if: always()
+      - name: Run prettier
+        run: poetry run npx prettier --check .
         if: always()
       - name: Collect staticfiles
         run: poetry run python3 manage.py collectstatic --noinput
