@@ -41,6 +41,9 @@ dokku config:set kalokohan SECRET_KEY=$(python3 -c "import secrets; print(''.joi
 # Set ALLOWED_HOSTS
 dokku config:set kalokohan ALLOWED_HOSTS=kalokohan.example.com
 
+# Set CSRF_TRUSTED_ORIGINS
+dokku config:set kalokohan CSRF_TRUSTED_ORIGINS=https://kalokohan.example.com
+
 # Set SENTRY_DSN
 dokku config:set kalokohan SENTRY_DSN=https://sentry-dsn-here.com/
 ```
