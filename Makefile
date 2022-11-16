@@ -15,3 +15,8 @@ test:
 
 test-keepdb:
 	docker compose exec web python3 manage.py test --settings=kalokohan.settings.test -v=2 --keepdb
+
+bump-deps:
+	poetry run poetryup
+	npx ncu -u
+	npm install
