@@ -1,3 +1,4 @@
+# Production build stage
 FROM python:3.11
 
 # Set up user
@@ -35,7 +36,8 @@ ENV PYTHONUNBUFFERED=1 \
 # Install project dependencies
 RUN python -m venv $VIRTUAL_ENV
 COPY --chown=kalokohan pyproject.toml poetry.lock ./
-RUN pip install --upgrade pip && poetry install --no-root
+RUN pip install --upgrade pip \
+  && poetry install --no-root --only main
 
 # Port used by this container to serve HTTP.
 EXPOSE 8000
@@ -47,3 +49,12 @@ COPY --chown=kalokohan:kalokohan . .
 RUN SECRET_KEY=dummy python3 manage.py collectstatic --noinput --clear
 
 CMD ["gunicorn", "kalokohan.wsgi:application"]
+
+# Dev build stage
+FROM production AS dev
+
+# Install main and dev project dependencies
+RUN poetry install --no-root
+
+# Add bash aliases
+COPY docker/.bash_aliases /home/kalokohan/.bash_aliases
