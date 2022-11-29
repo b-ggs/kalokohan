@@ -1,5 +1,5 @@
 # Production build stage
-FROM python:3.11
+FROM python:3.11 as production
 
 # Set up user
 RUN useradd --create-home kalokohan
