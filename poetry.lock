@@ -142,7 +142,7 @@ Django = ">3.2"
 
 [[package]]
 name = "Django"
-version = "4.2.dev20221128084752"
+version = "4.2.dev20221129074011"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -162,7 +162,7 @@ bcrypt = ["bcrypt"]
 type = "git"
 url = "https://github.com/django/django.git"
 reference = "HEAD"
-resolved_reference = "60a7bd89860e504c0c33b02c78edcac87f6d1b5a"
+resolved_reference = "85b52d22fd2841c34e95b3a80d6f2b668ce2f160"
 
 [[package]]
 name = "django-extensions"
