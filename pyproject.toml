@@ -23,9 +23,9 @@ responses = "^0.22.0"
 prometheus-client = "^0.15.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.10.0"
+black = "^22.12.0"
 isort = "^5.10.1"
-flake8 = "^5.0.4"
+flake8 = "^6.0.0"
 pre-commit = "^2.20.0"
 bandit = "^1.7.4"
 detect-secrets = "^1.4.0"
