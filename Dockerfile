@@ -14,7 +14,8 @@ ENV PATH=$VIRTUAL_ENV/bin:$PATH
 RUN mkdir -p "$VIRTUAL_ENV" && chown -R kalokohan:kalokohan "$VIRTUAL_ENV"
 
 # Install poetry
-ENV POETRY_VERSION=1.2.2
+# Make sure poetry version is in sync with CI configs
+ENV POETRY_VERSION=1.3.1
 ENV POETRY_HOME=/opt/poetry
 ENV PATH=$POETRY_HOME/bin:$PATH
 RUN curl -sSL https://install.python-poetry.org | python3 - \
