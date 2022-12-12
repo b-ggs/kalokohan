@@ -131,18 +131,18 @@ python-versions = "*"
 
 [[package]]
 name = "dj-database-url"
-version = "1.0.0"
+version = "1.1.0"
 description = "Use Database URLs in your Django Application."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-Django = ">3.2"
+Django = ">=3.2"
 
 [[package]]
 name = "Django"
-version = "4.2.dev20221210164613"
+version = "4.2.dev20221212093645"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -162,7 +162,7 @@ bcrypt = ["bcrypt"]
 type = "git"
 url = "https://github.com/django/django.git"
 reference = "HEAD"
-resolved_reference = "c5ed884eabf3b2b67581c55bf6c87e721f69157f"
+resolved_reference = "db7bb3b64e469fbb5c79e7b5b2fcb890434aa60f"
 
 [[package]]
 name = "django-extensions"
@@ -210,6 +210,17 @@ description = "Type stubs for Django"
 category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
+
+[[package]]
+name = "djhtml"
+version = "1.5.2"
+description = "Django/Jinja template indenter"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.extras]
+dev = ["black", "flake8", "isort", "nox", "pre-commit"]
 
 [[package]]
 name = "dslr"
@@ -786,7 +797,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "016a4bf4d5785f806a25e2a90b4f25564e74edbdeed7f3447513c692d2d0c4a0"
+content-hash = "095e64cb6f10d22a01e4563ca7cc8dbe3cad4693a152a06b8a013db07d9478bd"
 
 [metadata.files]
 asgiref = [
@@ -844,8 +855,8 @@ distlib = [
     {file = "distlib-0.3.6.tar.gz", hash = "sha256:14bad2d9b04d3a36127ac97f30b12a19268f211063d8f8ee4f47108896e11b46"},
 ]
 dj-database-url = [
-    {file = "dj-database-url-1.0.0.tar.gz", hash = "sha256:ccf3e8718f75ddd147a1e212fca88eecdaa721759ee48e38b485481c77bca3dc"},
-    {file = "dj_database_url-1.0.0-py3-none-any.whl", hash = "sha256:cd354a3b7a9136d78d64c17b2aec369e2ae5616fbca6bfbe435ef15bb372ce39"},
+    {file = "dj-database-url-1.1.0.tar.gz", hash = "sha256:8be4253439d75412aaad4f82af7aecda956893c87fb8d10edc0adb2d34312527"},
+    {file = "dj_database_url-1.1.0-py3-none-any.whl", hash = "sha256:5f2f6b3f65786bac5d3b9e749bff1dcac83398d95778576909697f7b16aee6b9"},
 ]
 Django = []
 django-extensions = [
@@ -863,6 +874,9 @@ django-solo = [
 django-types = [
     {file = "django-types-0.16.0.tar.gz", hash = "sha256:29d23af8b88fa1579b47418e92ffc1d89bfbdf11eab64d2ae006fa09e54fed9a"},
     {file = "django_types-0.16.0-py3-none-any.whl", hash = "sha256:9df4e1936f304f309a59f4cee19a607e151282fc0d97238833a382fafc5052c8"},
+]
+djhtml = [
+    {file = "djhtml-1.5.2.tar.gz", hash = "sha256:b54c4ab6effaf3dbe87d616ba30304f1dba22f07127a563df4130a71acc290ea"},
 ]
 dslr = [
     {file = "DSLR-0.4.0.tar.gz", hash = "sha256:32d132628de5767ed3fe2bfdd755374dd76da1fbe3b0b56c4c489ced1365e8f5"},
