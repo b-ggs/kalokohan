@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "kalokohan.logs",
     "kalokohan.utils",
     "kalokohan.wallpapers",
+    "kalokohan.weather",
     # Third-party apps
     "solo",
     # Django core apps
@@ -196,8 +197,16 @@ WALLPAPERS_UNSPLASH_CLIENT_CLASS = os.getenv(
     "WALLPAPERS_UNSPLASH_CLIENT_CLASS",
     "kalokohan.wallpapers.clients.UnsplashClient",
 )
-WALLPAPERS_LITTERBOX_CLIENT = os.getenv(
-    "WALLPAPERS_LITTERBOX_CLIENT",
+WALLPAPERS_LITTERBOX_CLIENT_CLASS = os.getenv(
+    "WALLPAPERS_LITTERBOX_CLIENT_CLASS",
     "kalokohan.wallpapers.clients.LitterboxClient",
 )
 WALLPAPERS_UNSPLASH_ACCESS_ID = os.getenv("WALLPAPERS_UNSPLASH_ACCESS_ID", "")
+
+
+# weather settings
+
+WEATHER_OPEN_METEO_CLIENT_CLASS = os.getenv(
+    "WEATHER_OPEN_METEO_CLIENT_CLASS",
+    "kalokohan.weather.cleints.OpenMeteoClient",
+)
