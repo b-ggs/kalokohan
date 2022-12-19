@@ -142,7 +142,7 @@ Django = ">=3.2"
 
 [[package]]
 name = "Django"
-version = "4.2.dev20221219115152"
+version = "4.2.dev20221219192538"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -162,7 +162,7 @@ bcrypt = ["bcrypt"]
 type = "git"
 url = "https://github.com/django/django.git"
 reference = "HEAD"
-resolved_reference = "289e9a75afb52918a3efbdaf5e72f45a54089083"
+resolved_reference = "0c60d11bdbe5bf353e3fa0f2db1cb85786ca3448"
 
 [[package]]
 name = "django-extensions"
@@ -601,7 +601,7 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
 [[package]]
 name = "sentry-sdk"
-version = "1.12.0"
+version = "1.12.1"
 description = "Python client for Sentry (https://sentry.io)"
 category = "main"
 optional = false
@@ -798,7 +798,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "ceff9f5a28f355428e17106d106723643af56a9a6ac4beabe46bcac8d6cbc83b"
+content-hash = "da7f6a28cca9d125ce24dbc9badcabeb191e24cf07ec9840c4484a269470204b"
 
 [metadata.files]
 asgiref = [
@@ -1091,8 +1091,8 @@ rich = [
     {file = "rich-12.6.0.tar.gz", hash = "sha256:ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0"},
 ]
 sentry-sdk = [
-    {file = "sentry-sdk-1.12.0.tar.gz", hash = "sha256:dc0fe6ef2f77a3853b399c75c97d87be7666098817c1c314f8fcdf68a6865914"},
-    {file = "sentry_sdk-1.12.0-py2.py3-none-any.whl", hash = "sha256:3c9bc64025976842c1103cd75d45cff94a7c0cc48fa07770d07a09d2ab8dac30"},
+    {file = "sentry-sdk-1.12.1.tar.gz", hash = "sha256:5bbe4b72de22f9ac1e67f2a4e6efe8fbd595bb59b7b223443f50fe5802a5551c"},
+    {file = "sentry_sdk-1.12.1-py2.py3-none-any.whl", hash = "sha256:9f0b960694e2d8bb04db4ba6ac2a645040caef4e762c65937998ff06064f10d6"},
 ]
 setuptools = [
     {file = "setuptools-65.6.3-py3-none-any.whl", hash = "sha256:57f6f22bde4e042978bcd50176fdb381d7c21a9efa4041202288d3737a0c6a54"},
