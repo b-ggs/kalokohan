@@ -2,3 +2,8 @@ __pycache__
 .env
 .python-version
 kalokohan/staticfiles
+
+Dockerfile
+compose.yml
+
+node_modules
