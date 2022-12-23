@@ -1,8 +1,8 @@
 import requests
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
+from django.utils.module_loading import import_string
 from faker import Faker
-from pydantic.utils import import_string
 
 from .factories import UnsplashPhotoFactory
 from .types import PhotoOrientations, UnsplashPhoto
@@ -158,5 +158,5 @@ class LitterboxClient(BaseLitterboxClient):
 
 
 def get_litterbox_client(**kwargs) -> BaseLitterboxClient:
-    client_class = import_string(settings.WALLPAPERS_LITTERBOX_CLIENT)
+    client_class = import_string(settings.WALLPAPERS_LITTERBOX_CLIENT_CLASS)
     return client_class(**kwargs)

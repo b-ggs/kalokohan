@@ -15,5 +15,9 @@ ALLOWED_HOSTS = ["*"]
 
 WALLPAPERS_API_KEY = "wallpapers"  # pragma: allowlist secret
 WALLPAPERS_UNSPLASH_CLIENT_CLASS = "kalokohan.wallpapers.clients.DummyUnsplashClient"
-WALLPAPERS_LITTERBOX_CLIENT = "kalokohan.wallpapers.clients.DummyLitterboxClient"
+WALLPAPERS_LITTERBOX_CLIENT_CLASS = "kalokohan.wallpapers.clients.DummyLitterboxClient"
 WALLPAPERS_UNSPLASH_ACCESS_ID = "unsplash_client_id"
+
+# weather settings
+
+WEATHER_OPEN_METEO_CLIENT_CLASS = "kalokohan.weather.clients.DummyOpenMeteoClient"
