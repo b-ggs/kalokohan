@@ -48,6 +48,15 @@ dokku config:set kalokohan CSRF_TRUSTED_ORIGINS=https://kalokohan.example.com
 dokku config:set kalokohan SENTRY_DSN=https://sentry-dsn-here.com/
 ```
 
+## Configure Dokku to build and release the `production` Docker image stage
+
+```bash
+# On your Dokku host:
+
+# Add "--target production" to the build args
+dokku docker-options:add kalokohan build "--target production"
+```
+
 ## Configure git and push your app
 
 ```bash
