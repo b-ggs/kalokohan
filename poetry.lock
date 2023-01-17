@@ -284,14 +284,16 @@ files = [
 Django = ">=3.2"
 
 [[package]]
-name = "Django"
-version = "4.2.dev20230113113141"
+name = "django"
+version = "4.2a1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
 python-versions = ">=3.8"
-files = []
-develop = false
+files = [
+    {file = "Django-4.2a1-py3-none-any.whl", hash = "sha256:e913e60991a0c2a5f099a80ea1e2ec90b1636e6deb60bad16b89086819b48d4b"},
+    {file = "Django-4.2a1.tar.gz", hash = "sha256:3a29fc014f46fd6a552296fd1cfc77f616c4120b68cc117eee4a8237aa163f7a"},
+]
 
 [package.dependencies]
 asgiref = ">=3.6.0"
@@ -301,12 +303,6 @@ tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
-
-[package.source]
-type = "git"
-url = "https://github.com/django/django.git"
-reference = "HEAD"
-resolved_reference = "d54717118360e8679aa2bd0c5a1625f3e84712ba"
 
 [[package]]
 name = "django-extensions"
@@ -1159,4 +1155,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "93e2b18c0e0f72ee9422f4a6fef935f5dd33137b6dedd48eca18bf2e1801f4bf"
+content-hash = "6068f0192617b01685e57aaf3e6d14e94eb675048028389515ee129202f903e5"
