@@ -1,4 +1,5 @@
 # Production build stage
+# Make sure Python version is in sync with CI configs
 FROM python:3.12-rc-bullseye as production
 
 # Set up user
@@ -13,8 +14,8 @@ ENV VIRTUAL_ENV=/venv
 ENV PATH=$VIRTUAL_ENV/bin:$PATH
 RUN mkdir -p "$VIRTUAL_ENV" && chown -R kalokohan:kalokohan "$VIRTUAL_ENV"
 
-# Install poetry
-# Make sure poetry version is in sync with CI configs
+# Install Poetry
+# Make sure Poetry version is in sync with CI configs
 ENV POETRY_VERSION=1.3.2
 ENV POETRY_HOME=/opt/poetry
 ENV PATH=$POETRY_HOME/bin:$PATH
