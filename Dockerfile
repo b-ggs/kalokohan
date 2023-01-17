@@ -1,5 +1,5 @@
 # Production build stage
-FROM python:3.11 as production
+FROM python:3.12-rc-bullseye as production
 
 # Set up user
 RUN useradd --create-home kalokohan
