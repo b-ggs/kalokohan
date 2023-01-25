@@ -20,7 +20,7 @@ django-ninja = "^0.20.0"
 django-solo = "^2.0.0"
 requests = "^2.28.2"
 responses = "^0.22.0"
-prometheus-client = "^0.15.0"
+prometheus-client = "^0.16.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
