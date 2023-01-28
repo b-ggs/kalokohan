@@ -36,7 +36,7 @@ ENV PYTHONUNBUFFERED=1 \
     PORT=8000
 
 # Install project dependencies
-RUN python -m venv $VIRTUAL_ENV
+RUN python3 -m venv $VIRTUAL_ENV
 COPY --chown=kalokohan pyproject.toml poetry.lock ./
 RUN pip install --upgrade pip \
   && poetry install --no-root --only main
