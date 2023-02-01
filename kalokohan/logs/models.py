@@ -9,18 +9,14 @@ class LogType(models.TextChoices):
     WALLPAPER = "WALLPAPER", "wallpaper"
 
 
-LogTypeType = Literal[
-    "WALLPAPER",
-]
+LogTypeType = Literal["WALLPAPER",]
 
 
 class LogSource(models.TextChoices):
     APPLE_SHORTCUTS = "APPLE_SHORTCUTS", "apple shortcuts"
 
 
-LogSourceType = Literal[
-    "APPLE_SHORTCUTS",
-]
+LogSourceType = Literal["APPLE_SHORTCUTS",]
 
 
 class LogItem(TimeStampedModel):
