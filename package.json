@@ -2,8 +2,7 @@
   "name": "kalokohan",
   "version": "0.1.0",
   "engines": {
-    "node": ">=19.0.0 <20.0.0",
-    "npm": ">=9.0.0 <10.0.0"
+    "node": ">=19.0.0 <20.0.0"
   },
   "devDependencies": {
     "npm-check-updates": "^16.6.3",
