@@ -92,7 +92,7 @@ if "DATABASE_URL" in os.environ:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa: E501
     },
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
@@ -149,7 +149,7 @@ if sentry_dsn := os.getenv("SENTRY_DSN"):
 
     SENTRY_ENVIRONMENT = DJANGO_ENV
 
-    # Attempt to get release version from Sentry's utils and a couple other environment variables
+    # Attempt to get release version from Sentry's utils and a couple other environment variables  # noqa: E501
     def get_release_version():
         release = get_default_release()
         # Use GIT_REV for Dokku
@@ -186,7 +186,7 @@ if sentry_dsn := os.getenv("SENTRY_DSN"):
 # Monkey-patch classes as specified in the README
 
 for cls in [ForeignKey]:
-    cls.__class_getitem__ = classmethod(lambda cls, *args, **kwargs: cls)  # type: ignore [attr-defined]
+    cls.__class_getitem__ = classmethod(lambda cls, *args, **kwargs: cls)  # type: ignore [attr-defined]  # noqa: E501
 
 
 # wallpapers settings
