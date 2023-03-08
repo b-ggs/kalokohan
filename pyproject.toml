@@ -24,11 +24,11 @@ prometheus-client = "^0.16.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
-ruff = "^0.0.253"
+ruff = "^0.0.254"
 pre-commit = "^3.1.1"
 bandit = "^1.7.4"
 detect-secrets = "^1.4.0"
-djhtml = "^3.0.2"
+djhtml = "^3.0.4"
 dslr = "^0.4.0"
 django-types = "^0.17.0"
 
