@@ -39,7 +39,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12.0-alpha.4"
+          python-version: "3.12.0-alpha.6"
           cache: poetry
 
       - name: Set up Node
