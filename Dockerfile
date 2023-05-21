@@ -3,7 +3,7 @@
 ####################
 
 # Make sure Python version is in sync with CI configs
-FROM python:3.12.0a6-bullseye AS base
+FROM python:3.12.0a7-bullseye AS base
 
 # Set up unprivileged user
 RUN useradd --create-home kalokohan
@@ -21,7 +21,7 @@ RUN mkdir -p "$VIRTUAL_ENV" \
 
 # Install Poetry
 # Make sure Poetry version is in sync with CI configs
-ENV POETRY_VERSION=1.4.2
+ENV POETRY_VERSION=1.5.0
 ENV POETRY_HOME=/opt/poetry
 ENV PATH=$POETRY_HOME/bin:$PATH
 RUN curl -sSL https://install.python-poetry.org | python3 - \
