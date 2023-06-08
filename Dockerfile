@@ -3,7 +3,7 @@
 ####################
 
 # Make sure Python version is in sync with CI configs
-FROM python:3.12.0a7-bullseye AS base
+FROM python:3.12.0b2-bullseye AS base
 
 # Set up unprivileged user
 RUN useradd --create-home kalokohan
