@@ -42,12 +42,6 @@ jobs:
           python-version: "3.12.0-alpha.6"
           cache: poetry
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19
-          cache: npm
-
       - name: Install dependencies with Poetry
         run: poetry install
 
@@ -68,11 +62,11 @@ jobs:
         if: always()
 
       - name: Run pyright
-        run: poetry run npx pyright .
+        run: poetry run pyright .
         if: always()
 
       - name: Run prettier
-        run: poetry run npx prettier --check .
+        run: npx prettier@2.8.8 --check .
         if: always()
 
       - name: Collect staticfiles
