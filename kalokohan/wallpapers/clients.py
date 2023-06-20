@@ -69,6 +69,7 @@ class UnsplashClient(BaseUnsplashClient):
             url,
             params=params,
             headers=self.get_headers(),
+            timeout=30,
         )
 
         if not resp.ok:
@@ -149,6 +150,7 @@ class LitterboxClient(BaseLitterboxClient):
                 "time": (None, "1h"),
                 "fileToUpload": ("image.jpg", image_binary),
             },
+            timeout=30,
         )
 
         if not resp.ok:

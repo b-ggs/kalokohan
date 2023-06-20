@@ -46,7 +46,7 @@ def get_wallpaper(
     except Exception as e:
         logger.exception(e)
 
-    resp = requests.get(unsplash_photo.image_url)
+    resp = requests.get(unsplash_photo.image_url, timeout=30)
     image_binary = resp.content
 
     client = get_litterbox_client()
