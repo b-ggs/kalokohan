@@ -24,7 +24,7 @@ prometheus-client = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
-ruff = "^0.0.274"
+ruff = "^0.0.275"
 pre-commit = "^3.3.3"
 bandit = "^1.7.5"
 detect-secrets = "^1.4.0"
