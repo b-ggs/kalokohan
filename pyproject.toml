@@ -14,7 +14,7 @@ gunicorn = "^21.2.0"
 dj-database-url = "^2.1.0"
 whitenoise = "^6.5.0"
 psycopg = "^3.1.10"
-sentry-sdk = "^1.29.2"
+sentry-sdk = "^1.30.0"
 factory-boy = "^3.3.0"
 django-ninja = "^0.22.2"
 django-solo = "^2.1.0"
@@ -24,14 +24,14 @@ prometheus-client = "^0.17.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
-ruff = "^0.0.285"
+ruff = "^0.0.286"
 pre-commit = "^3.3.3"
 bandit = "^1.7.5"
 detect-secrets = "^1.4.0"
 djhtml = "^3.0.6"
 dslr = "^0.4.0"
 django-types = "^0.17.0"
-pyright = "^1.1.324"
+pyright = "^1.1.325"
 
 [build-system]
 requires = ["poetry-core"]
