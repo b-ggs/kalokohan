@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "kalokohan.configs",
     "kalokohan.home",
     "kalokohan.logs",
+    "kalokohan.scrapers",
     "kalokohan.utils",
     "kalokohan.wallpapers",
     # Third-party apps
