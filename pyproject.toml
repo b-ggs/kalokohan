@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "kalokohan"}]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 django = {version = "^4.2.4", allow-prereleases = true}
 django-extensions = "^3.2.3"
 gunicorn = "^21.2.0"
@@ -21,6 +21,7 @@ django-solo = "^2.1.0"
 requests = "^2.31.0"
 responses = "^0.23.3"
 prometheus-client = "^0.17.1"
+facebook-scraper = "^0.2.59"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
