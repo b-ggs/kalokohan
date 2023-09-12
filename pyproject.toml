@@ -8,7 +8,7 @@ packages = [{include = "kalokohan"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = {version = "^4.2.4", allow-prereleases = true}
+django = {version = "^4.2.5", allow-prereleases = true}
 django-extensions = "^3.2.3"
 gunicorn = "^21.2.0"
 dj-database-url = "^2.1.0"
@@ -24,15 +24,15 @@ prometheus-client = "^0.17.1"
 facebook-scraper = "^0.2.59"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.7.0"
+black = "^23.9.1"
 ruff = "^0.0.286"
-pre-commit = "^3.3.3"
+pre-commit = "^3.4.0"
 bandit = "^1.7.5"
 detect-secrets = "^1.4.0"
 djhtml = "^3.0.6"
 dslr = "^0.4.0"
 django-types = "^0.17.0"
-pyright = "^1.1.325"
+pyright = "^1.1.326"
 
 [build-system]
 requires = ["poetry-core"]
