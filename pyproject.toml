@@ -8,13 +8,13 @@ packages = [{include = "kalokohan"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = {version = "^4.2.5", allow-prereleases = true}
+django = {version = "^5.0a1", allow-prereleases = true}
 django-extensions = "^3.2.3"
 gunicorn = "^21.2.0"
 dj-database-url = "^2.1.0"
 whitenoise = "^6.5.0"
 psycopg = "^3.1.10"
-sentry-sdk = "^1.30.0"
+sentry-sdk = "^1.31.0"
 factory-boy = "^3.3.0"
 django-ninja = "^0.22.2"
 django-solo = "^2.1.0"
@@ -32,7 +32,7 @@ detect-secrets = "^1.4.0"
 djhtml = "^3.0.6"
 dslr = "^0.4.0"
 django-types = "^0.17.0"
-pyright = "^1.1.326"
+pyright = "^1.1.327"
 
 [build-system]
 requires = ["poetry-core"]
