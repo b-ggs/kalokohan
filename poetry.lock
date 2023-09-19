@@ -358,17 +358,17 @@ typing-extensions = ">=3.10.0.0"
 
 [[package]]
 name = "django"
-version = "5.0a1"
+version = "4.2.5"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.8"
 files = [
-    {file = "Django-5.0a1-py3-none-any.whl", hash = "sha256:4b7ee536e8b2bf1e68f6c9bda192300ec94844e32e730076c2e520bc63dac64e"},
-    {file = "Django-5.0a1.tar.gz", hash = "sha256:3a52052fbc5e01f2202c020a8241aa40dc030b16c8fb49dc480cc46ab8735158"},
+    {file = "Django-4.2.5-py3-none-any.whl", hash = "sha256:b6b2b5cae821077f137dc4dade696a1c2aa292f892eca28fa8d7bfdf2608ddd4"},
+    {file = "Django-4.2.5.tar.gz", hash = "sha256:5e5c1c9548ffb7796b4a8a4782e9a2e5a3df3615259fc1bfd3ebc73b646146c1"},
 ]
 
 [package.dependencies]
-asgiref = ">=3.7.0"
+asgiref = ">=3.6.0,<4"
 sqlparse = ">=0.3.1"
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
@@ -1750,4 +1750,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "a9a3837b82faafd01cbcc8daa73e1a7a43ddf07bc369b92dfdbf97b294eb25e4"
+content-hash = "3998f45be4cda2a09272eb4c101a616bbba2446e820e1a631ff267395e814bd5"
