@@ -3,12 +3,14 @@ from django.contrib import admin
 from django.urls import include, path
 from ninja import NinjaAPI
 
+from kalokohan.health_stats.api import router as health_stats_api
 from kalokohan.home import urls as home_urls
 from kalokohan.logs.api import router as logs_router
 from kalokohan.scrapers import urls as scrapers_urls
 from kalokohan.wallpapers.api import router as wallpapers_api
 
 api_v1 = NinjaAPI(version="1.0.0")
+api_v1.add_router("health-stats/", health_stats_api)
 api_v1.add_router("logs/", logs_router)
 api_v1.add_router("wallpapers/", wallpapers_api)
 

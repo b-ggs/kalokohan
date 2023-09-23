@@ -27,6 +27,7 @@ else:
 INSTALLED_APPS = [
     # Project apps
     "kalokohan.configs",
+    "kalokohan.health_stats",
     "kalokohan.home",
     "kalokohan.logs",
     "kalokohan.scrapers",
