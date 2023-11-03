@@ -20,7 +20,7 @@ django-ninja = "^0.22.2"
 django-solo = "^2.1.0"
 requests = "^2.31.0"
 responses = "^0.23.3"
-prometheus-client = "^0.17.1"
+prometheus-client = "~0.18.0"
 facebook-scraper = "^0.2.59"
 
 [tool.poetry.group.dev.dependencies]
