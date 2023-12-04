@@ -40,5 +40,5 @@ test-keepdb:
 	docker compose exec web python3 manage.py test --settings=kalokohan.settings.test -v=2 --keepdb
 
 bump-deps:
-	docker compose run --rm --no-deps web poetry up --latest
+	docker compose run --rm --no-deps web poetry up
 	docker compose run --rm --no-deps web pre-commit autoupdate
