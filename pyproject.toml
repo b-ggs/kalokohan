@@ -19,7 +19,7 @@ factory-boy = "^3.3.0"
 django-ninja = "^1.1.0"
 django-solo = "^2.2.0"
 requests = "^2.31.0"
-responses = "~0.24.1"
+responses = "~0.25.0"
 prometheus-client = "~0.19.0"
 facebook-scraper = "^0.2.59"
 
