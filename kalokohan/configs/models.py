@@ -17,5 +17,5 @@ class SiteConfiguration(SingletonModel):
     def get_solo(cls) -> "SiteConfiguration":
         return cast("SiteConfiguration", super().get_solo())
 
-    class Meta:
+    class Meta:  # pyright: ignore [reportIncompatibleVariableOverride]
         verbose_name = "Site Configuration"

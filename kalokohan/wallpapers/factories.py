@@ -17,5 +17,5 @@ class UnsplashPhotoFactory(
     )
     item_url = factory.Faker("url")
 
-    class Meta:
+    class Meta:  # pyright: ignore [reportIncompatibleVariableOverride]
         model = UnsplashPhoto

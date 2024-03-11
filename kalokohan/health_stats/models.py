@@ -11,7 +11,7 @@ class WeightItem(models.Model):
     def __str__(self) -> str:
         return f"{self.weighed_at} - {self.weight_lbs} lbs"
 
-    class Meta:
+    class Meta:  # pyright: ignore [reportIncompatibleVariableOverride]
         ordering = ["-weighed_at"]
 
 
@@ -25,5 +25,5 @@ class APIConfiguration(SingletonModel):
     def get_solo(cls) -> "APIConfiguration":
         return cast("APIConfiguration", super().get_solo())
 
-    class Meta:
+    class Meta:  # pyright: ignore [reportIncompatibleVariableOverride]
         verbose_name = "API configuration"
