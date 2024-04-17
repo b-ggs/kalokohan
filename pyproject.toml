@@ -21,7 +21,6 @@ django-solo = "^2.2.0"
 requests = "^2.31.0"
 responses = "^0.25.0"
 prometheus-client = "^0.20.0"
-facebook-scraper = "^0.2.59"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"

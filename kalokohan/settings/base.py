@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     "kalokohan.health_stats",
     "kalokohan.home",
     "kalokohan.logs",
-    "kalokohan.scrapers",
     "kalokohan.utils",
     "kalokohan.wallpapers",
     # Third-party apps
