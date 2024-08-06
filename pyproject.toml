@@ -8,7 +8,7 @@ packages = [{include = "kalokohan"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "^4.2.14"
+django = "^4.2.15"
 django-extensions = "^3.2.3"
 gunicorn = "^22.0.0"
 dj-database-url = "^2.2.0"
