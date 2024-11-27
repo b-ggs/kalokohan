@@ -25,7 +25,7 @@ prometheus-client = "^0.21.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
 pre-commit = "^4.0.1"
-bandit = "^1.7.10"
+bandit = "^1.8.0"
 detect-secrets = "^1.5.0"
 djhtml = "^3.0.7"
 dslr = {version="*", extras=["psycopg2-binary"]}
