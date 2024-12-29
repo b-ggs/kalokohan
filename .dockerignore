@@ -1,10 +1,12 @@
 __pycache__
 .env
 .python-version
+**.dump
 kalokohan/staticfiles
 
 Dockerfile
 compose.yml
+README.md
 docs
 
 node_modules

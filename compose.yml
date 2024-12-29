@@ -5,9 +5,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgres://postgres_user:postgres_password@postgres:5432/postgres_db
+      DATABASE_URL: postgres://postgres_user:postgres_password@postgres:5432/postgres_db  # pragma: allowlist secret
       DJANGO_SETTINGS_MODULE: kalokohan.settings.dev
-    env_file: .env
     volumes:
       - .:/app
     init: true

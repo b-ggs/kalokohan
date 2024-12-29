@@ -65,7 +65,7 @@ jobs:
         uses: pre-commit/action@v3.0.1
 
       - name: Check for missing migrations
-        run: poetry run python manage.py makemigrations --check --noinput
+        run: poetry run python3 manage.py makemigrations --check --noinput
         if: always()
 
       - name: Collect staticfiles
@@ -75,7 +75,7 @@ jobs:
         run: poetry run python3 manage.py test --settings=kalokohan.settings.test -v=2
 
       - name: Build dev Docker image
-        run: docker build -t django-template:dev --target dev .
+        run: docker build -t kalokohan:dev --target dev .
 
       - name: Build production Docker image
-        run: docker build -t django-template:production --target production .
+        run: docker build -t kalokohan:production --target production .

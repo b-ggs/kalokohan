@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class ConfigsConfig(AppConfig):
+class UsersConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "kalokohan.configs"
-    label = "configs"
+    name = "kalokohan.users"
+    label = "users"

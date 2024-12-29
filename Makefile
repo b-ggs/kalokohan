@@ -27,9 +27,9 @@ sh:
 	@echo "You can run your development server with \`djrun\`"
 	@echo ""
 	@echo "Several bash aliases exist in this container such as:"
-	@echo "  - \`dj\` - \`./manage.py\`"
-	@echo "  - \`djtest\` - \`./manage.py test --settings=kalokohan.settings.test -v=2\`"
-	@echo "  - \`djtestkeepdb\` - \`./manage.py test --settings=kalokohan.settings.test -v=2 --keepdb\`"
+	@echo "  - \`dj\` - \`python3 manage.py\`"
+	@echo "  - \`djtest\` - \`python3 manage.py test --settings=kalokohan.settings.test -v=2\`"
+	@echo "  - \`djtestkeepdb\` - \`python3 manage.py test --settings=kalokohan.settings.test -v=2 --keepdb\`"
 	@echo ""
 	docker compose exec web bash
 
@@ -42,3 +42,43 @@ test-keepdb:
 bump-deps:
 	docker compose run --rm --no-deps web poetry up
 	docker compose run --rm --no-deps web pre-commit autoupdate
+
+rename:
+	@# Check if PROJECT_NAME is defined
+	@if [ -z "$$PROJECT_NAME" ]; then \
+		echo ""; \
+		echo "Usage:"; \
+		echo "    make rename PROJECT_NAME=my_project_name_with_underscores"; \
+		echo ""; \
+		exit 1; \
+	fi
+
+	@# Get a version of PROJECT_NAME but with dashes instead of underscores
+	$(eval PROJECT_NAME_KEBAB := $(subst _,-,$(PROJECT_NAME)))
+
+	@echo ""
+	@echo "This Makefile target will:"
+	@echo "1.) Replace all instances of the following in files and folders:"
+	@echo "  - \`kalokohan\` with \`$(PROJECT_NAME)\`"
+	@echo "  - \`kalokohan\` with \`$(PROJECT_NAME_KEBAB)\`"
+	@echo ""
+	@echo "Proceeding in 10 seconds..."
+	@echo ""
+
+	@sleep 10
+
+	@# Rename the kalokohan directory
+	mv kalokohan $(PROJECT_NAME)
+
+	@# Replace all instances of kalokohan with PROJECT_NAME
+	grep -rl kalokohan . | xargs perl -i -pe "s/kalokohan/$(PROJECT_NAME)/g"
+
+	@# Replace all instances of kalokohan with PROJECT_NAME_KEBAB
+	grep -rl kalokohan . | xargs perl -i -pe "s/kalokohan/$(PROJECT_NAME_KEBAB)/g"
+
+	@# Reset git index
+	rm .git/index
+	git reset
+
+	@echo ""
+	@echo "Done!"
