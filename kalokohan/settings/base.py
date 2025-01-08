@@ -5,7 +5,7 @@ import dj_database_url
 from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 DJANGO_ENV = os.getenv("DJANGO_ENV", "production")
 
@@ -60,7 +60,7 @@ ROOT_URLCONF = "kalokohan.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [os.path.join(BASE_DIR, "kalokohan", "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -110,7 +110,7 @@ LANGUAGES = [
     ("tl", _("Tagalog")),
 ]
 
-LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
+LOCALE_PATHS = [os.path.join(BASE_DIR, "kalokohan", "locale")]
 
 
 # Use a custom User model
@@ -158,16 +158,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATICFILES_DIRS = [
-    # Global static files can be stored in kalokohan/staticfiles and
-    # are accessible via the namespace `staticfiles/filename`, e.g.
-    # {% static 'staticfiles/styles.css' %}
-    ("staticfiles", os.path.join(BASE_DIR, "staticfiles_src")),
+    # Static files such as images and other assets can be stored in
+    # `kalokohan/static`
+    os.path.join(BASE_DIR, "kalokohan", "static"),
+    # Static files that are built by external tooling, e.g. Tailwind
+    # are stored in `kalokohan/static_built`
+    os.path.join(BASE_DIR, "kalokohan", "static_built"),
 ]
 
-# Collected static files will be stored in kalokohan/staticfiles_collected
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_collected")
+# Collected static files will be stored in static_collected
+STATIC_ROOT = os.path.join(BASE_DIR, "static_collected")
 
+# Static files will be served under /static/
 STATIC_URL = "/static/"
+
 
 # Simplified static file serving
 # https://devcenter.heroku.com/articles/django-assets

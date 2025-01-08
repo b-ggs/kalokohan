@@ -9,12 +9,10 @@ services:
       DJANGO_SETTINGS_MODULE: kalokohan.settings.dev
     volumes:
       - .:/app
+      - node-modules-data:/app/node_modules/
     init: true
     stdin_open: true
     tty: true
-    depends_on:
-      postgres:
-        condition: service_healthy
 
   postgres:
     # Make sure Postgres version is in sync with CI configs and is available on Heroku
@@ -28,11 +26,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
     volumes:
       - postgres-data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres_user", "-d", "postgres_db"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
 volumes:
+  node-modules-data:
   postgres-data:

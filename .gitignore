@@ -1,6 +1,8 @@
 __pycache__
 .env
 **.dump
-kalokohan/staticfiles_collected
+
+kalokohan/static_built
+static_collected
 
 node_modules
