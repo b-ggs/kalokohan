@@ -30,7 +30,7 @@ sh:
 	@echo "  - \`dj\` - \`python3 manage.py\`"
 	@echo "  - \`djtest\` - \`python3 manage.py test --settings=kalokohan.settings.test -v=2\`"
 	@echo "  - \`djtestkeepdb\` - \`python3 manage.py test --settings=kalokohan.settings.test -v=2 --keepdb\`"
-	@echo "  - \`twbuild\` - \`npx tailwindcss -i kalokohan/static_src/tailwind/styles.css -o kalokohan/static_built/tailwind/styles.css --watch\`"
+	@echo "  - \`twwatch\` - \`npm run tailwind:watch\`"
 	@echo ""
 	docker compose exec web bash
 

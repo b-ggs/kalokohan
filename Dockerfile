@@ -3,11 +3,11 @@
 ##############################
 
 # Make sure Python version is in sync with CI configs
-FROM python:3.12-slim-bookworm AS poetry-install
+FROM python:3.13-slim-bookworm AS poetry-install
 
 # Install Poetry
 # Make sure Poetry version is in sync with CI configs
-ENV POETRY_VERSION=1.8.5
+ENV POETRY_VERSION=2.1.3
 ENV POETRY_HOME=/opt/poetry
 ENV PATH=/opt/poetry/bin:$PATH
 ADD https://install.python-poetry.org /tmp/poetry-install.py
@@ -18,7 +18,7 @@ RUN python3 /tmp/poetry-install.py
 ####################
 
 # Make sure Python version is in sync with CI configs
-FROM python:3.12-slim-bookworm AS base
+FROM python:3.13-slim-bookworm AS base
 
 # Configure apt to keep downloaded packages for BuildKit caching
 # https://docs.docker.com/reference/dockerfile/#example-cache-apt-packages
@@ -94,6 +94,7 @@ COPY --from=poetry-install --chown=kalokohan:kalokohan /opt/poetry /opt/poetry
 RUN --mount=type=bind,source=pyproject.toml,target=/app/pyproject.toml \
   --mount=type=bind,source=poetry.lock,target=/app/poetry.lock \
   --mount=type=cache,target=/home/kalokohan/.cache/pypoetry,uid=1000 \
+  --mount=type=cache,target=/home/kalokohan/.cache/pip,uid=1000 \
   poetry install --only main
 
 # Install Node dependencies
@@ -193,6 +194,7 @@ RUN --mount=type=bind,source=package.json,target=/app/package.json \
 RUN --mount=type=bind,source=pyproject.toml,target=/app/pyproject.toml \
   --mount=type=bind,source=poetry.lock,target=/app/poetry.lock \
   --mount=type=cache,target=/home/kalokohan/.cache/pypoetry,uid=1000 \
+  --mount=type=cache,target=/home/kalokohan/.cache/pip,uid=1000 \
   poetry install
 
 # Add bash aliases
@@ -200,7 +202,7 @@ RUN echo "alias dj='python3 manage.py'" >> $HOME/.bash_aliases
 RUN echo "alias djrun='python3 manage.py runserver 0:8000'" >> $HOME/.bash_aliases
 RUN echo "alias djtest='python3 manage.py test --settings=kalokohan.settings.test -v=2'" >> $HOME/.bash_aliases
 RUN echo "alias djtestkeepdb='python3 manage.py test --settings=kalokohan.settings.test -v=2 --keepdb'" >> $HOME/.bash_aliases
-RUN echo "alias twbuild='npx tailwindcss -i kalokohan/static_src/tailwind/styles.css -o kalokohan/static_built/tailwind/styles.css --watch'" >> $HOME/.bash_aliases
+RUN echo "alias twwatch='npm run tailwind:watch'" >> $HOME/.bash_aliases
 
 # Copy the project files
 # Ensure that this is one of the last commands for better layer caching
