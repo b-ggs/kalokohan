@@ -1,5 +1,5 @@
 {
-  "name": "django-template",
+  "name": "kalokohan",
   "version": "0.0.0",
   "scripts": {
     "tailwind:build": "npx @tailwindcss/cli -i kalokohan/static_src/tailwind/styles.css -o kalokohan/static_built/tailwind/styles.css --minify",
