@@ -38,3 +38,7 @@ select = ["E", "F", "W", "C90", "I"]
 
 [tool.bandit]
 exclude_dirs = ["tests"]
+
+[tool.djlint]
+# https://www.djlint.com/docs/linter/#rules
+ignore = "H029,H030,H031"
