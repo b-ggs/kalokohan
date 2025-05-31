@@ -83,5 +83,5 @@ dokku certs:add kalokohan < /path/to/certs/kalokohan.example.com.tar
 # On your Dokku host:
 
 # Forward requests from host ports 80 and 443 to container port 8000
-dokku proxy:ports-set kalokohan http:80:8000 https:443:8000
+dokku ports:set kalokohan http:80:8000
 ```
